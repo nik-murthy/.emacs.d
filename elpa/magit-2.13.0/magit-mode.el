@@ -541,7 +541,7 @@ Magit is documented in info node `(magit)'."
   (add-hook 'deactivate-mark-hook #'magit-section-update-highlight t t)
   (setq-local redisplay-highlight-region-function 'magit-highlight-region)
   (setq-local redisplay-unhighlight-region-function 'magit-unhighlight-region)
-  (when (bound-and-true-p global-linum-mode)
+  (when (bound-and-true-p global-display-line-numbers-mode)
     (linum-mode -1))
   (when (and (fboundp 'nlinum-mode)
              (bound-and-true-p global-nlinum-mode))
